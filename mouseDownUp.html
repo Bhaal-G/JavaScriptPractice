@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #247395;
+            display: grid;
+            place-items: center;
+        }
+        button{
+            background: #7c1a58;
+            color: white;
+            font-size: 16px;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            padding: 10px 22px;
+            z-index: 100000;
+        }
+        p{
+            text-align: center;
+        }
+        h1{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum incidunt
+         fuga debitis similique, nisi amet cum inventore sequi sint corporis o
+         fficia, voluptatibus maiores mollitia! Temporibus assumenda, quisquam sed
+          voluptatibus, possimus, dolorem distinctio similique dicta qu
+          as harum alias labore saepe corrupti provident animi laboriosam 
+        ad fugiat cumque ex placeat neque odio!
+    </p>
+    <script>
+        function mouseDown(){
+            document.getElementById("myP").style.color="orange";
+        }
+        function mouseUp(){
+            document.getElementById("myP").style.color="red";
+        }
+    </script>
+    
+</body>
+</html>

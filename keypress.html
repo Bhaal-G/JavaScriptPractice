@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(45, 159, 140);
+            margin: 150px;
+            padding: 100px;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <p>Lorem ipsum dolor, sit amet 
+            consectetur adipisicing elit. 
+            Quia necessitatibus magni deleniti eligendi vitae. Temporibus praesentium, 
+            dolor iure dolores at eum repellendus optio aut asperiores incidunt accusamus tempora illum magni quasi quod!
+            </p>
+            <br>
+            <input type="text" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()">
+            <p id="keys"></p>
+            <!-- <div id="box"></div> -->
+    </div>
+    <script>
+        // const keyPress=()=>{
+        //     document.getElementById('keys').innerHTML=`you press ${event.key} and it's code is${event.code}`;
+        // } 
+        const keyDown=()=>{
+            document.getElementById('keys').innerHTML='Key is Down';
+        }
+        const keyUp=()=>{
+            document.getElementById('keys').innerHTML='key is up';
+        }
+        
+    </script>
+</body>
+</html>

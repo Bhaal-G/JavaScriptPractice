@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #21b1c4;
+        }
+        h1{
+            text-align: center;
+            color: antiquewhite;
+        }
+        .content{
+            padding-top: 176px;
+            padding-bottom: 20px;
+        }
+        .button_container{
+            width: 176px;
+            margin: 0 auto;
+            margin-top: 30px;
+            padding-top: 40px;
+        }
+        .button_su{
+            position:relative;
+            display: inline-block;
+            border-radius: 3px;
+            margin-bottom: 30px;
+        }
+        .su_button_circle{
+            background: #701498;
+            border-radius: 1000px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0px;
+            height: 0px;
+        }
+        .button_su_inner{
+            display: inline-block;
+            background: #a9e443;
+            color: white;
+            font-size: 16px;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            padding: 22px;
+
+        }
+        .button_text_container{
+            position: relative;
+            z-index: 10000;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Different Events Types in JS</h1>
+        <div class="button_container">
+            <div class="button_su">
+                <span class="su_button_circle">
+                </span>
+                <a href="#" class="button_su_inner" onclick="alert('I am awesome,But Not you')">simple Inline alert() here</a>
+                <span class="button_text_container">
+                    
+                </span>
+            </div>
+            <div class="button_su">
+                <span class="su_button_circle">
+                </span>
+                <a href="" class="button_su_inner" onclick="callingFunction()">
+                    <span class="button_text_container">
+                        By calling a Function
+                    </span>
+                </a>
+            </div>
+            <div class="button_su">
+                <span class="su_button_cirle">
+                </span>
+                <a href="#" class="button_su_inner">
+                    <span class="button_text_container" id="thirdWay">
+                        Inline event
+                    </span>
+                </a>
+            </div>
+            <div class="button_su">
+                <span class="su_button_circle">
+                </span>
+                <a href="#" class="button_su_inner" id="fourthWay">
+                    <span class="button_text_container">
+                        Even Listners
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 2nd Way
+        const callingFunction=()=>{
+            alert('most common way of writing functions you idiot ')
+        }
+        // 3rd way
+        const thirdWay=document.getElementById('thirdWay');
+        thirdWay.onclick=function(){
+            alert('Another Way of Writing function you idiot')
+        }
+        // 4th way
+        const fourthWay=document.querySelector('#fourthWay');
+        fourthWay.addEventListener('click',()=>{
+            alert('You really are an Idiot');
+        })
+    </script>
+</body>
+</html>

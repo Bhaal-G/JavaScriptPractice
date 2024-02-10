@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: grid;
+            background: #24837e;
+            place-items: center;
+        }
+        button{
+            display: inline-block;
+            background: #c0c033;
+        }
+        p,form{
+            text-align: center;
+            color: antiquewhite;
+        }
+        h1{
+            color: rgb(29, 166, 38);
+        }
+        button{
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <p class="para">Plz listen to this music</p>
+    <p class="para">Plz share this music</p>
+    <p>Don't forget to subscribe to my playlist</p>
+    <h1 id="heading">changed the content of the h1</h1>
+    <form action="">
+        <label for="">male</label>
+        <input type="radio" name="gender" id="">
+        <label for="">female</label>
+        <input type="radio" name="gender" id="">
+        <label for="">malefemale</label>
+        <input type="radio" name="gender" id="">
+    </form>
+    <br>
+    <button onclick="changeContent()">Click me</button>
+</body>
+<script>
+    const changeContent=()=>{
+        // document.getElementById('heading').innerHTML="Welcome Nipurn Bhaal";
+        // const headingChange=document.getElementById('heading');
+        // headingChange.innerHTML="Welcome";
+        // console.log(document.getElementsByClassName('para'));
+        // console.log(document.getElementsByTagName('p'));
+        // console.log(document.getElementsByName('gender'));
+
+        // document.querySelector('#heading').innerHTML="I changed again";
+        // document.querySelector('.para').innerHTML="I changed again";
+        console.log(document.querySelectorAll('#heading'));
+    }   
+</script>
+</html>

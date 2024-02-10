@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #286a69;
+        }
+        #btn{
+            display: inline-block;
+            background: gold;
+            /* color: white; */
+            font-size: 12px;
+            text-align: center;
+            border-radius: 3px;
+            z-index: 100000;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        #btn1{
+            display: inline-block;
+            background: gold;
+            /* color: white; */
+            font-size: 12px;
+            text-align: center;
+            border-radius: 3px;
+            z-index: 100000;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <p>Set Time Interval</p>
+            <br>
+            <div id="btn">Click here</div>
+            <div id="btn1">Stop here</div>
+        </div>
+    </div>
+    <script>
+        const stopNum=document.querySelector('p');
+        const btn=document.querySelector('#btn');
+        const stopInterval=document.querySelector('#btn1');
+
+        let num=0;
+        let timeRef;
+
+        const showMyName=()=>{
+            stopNum.innerHTML="Loading.....";
+
+            timeRef=setInterval(()=>{
+                stopNum.innerHTML=`${num}`;
+                num++;
+            },1000)
+        }
+
+        btn.addEventListener('click',showMyName);
+        stopInterval.addEventListener('click',()=>{
+            clearInterval(timeRef);
+        })
+
+    </script>
+    
+</body>
+</html>

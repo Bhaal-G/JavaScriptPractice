@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <label for="">Your name</label>
+            <input type="text" name="" id="ice">
+            <br>
+            <label>Choose an ice cream flavour
+                <select name="iceCreams" id="iceCream" onchange="selectElement()">
+                    <option value="">Select One</option>
+                    <option value="choco">Chocolate</option>
+                    <option value="sardine">Sardine</option>
+                    <option value="vanilla">vanilla</option>
+                </select>
+            </label>
+            <br>
+        </div>
+        <div id="result"></div> 
+    </div>
+    <script>
+        const selectElement=()=>{
+            const inputChange=document.getElementById('ice').value;
+            const iceCreams=document.getElementById('iceCream').value;
+            const result=document.getElementById('result');
+
+            result.innerHTML=`Mr ${inputChange} select ${iceCreams} ice-cream flavour`
+
+            console.log(`${inputChange} and ${iceCreams}`);
+            
+        }
+    </script>
+    
+</body>
+</html>
